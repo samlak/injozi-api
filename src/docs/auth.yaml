@@ -83,7 +83,7 @@ components:
         password:
           type: string
       example:
-        email: user3@injozi.com
+        email: user1@injozi.com
         password: password
 
     LoginResponse: 

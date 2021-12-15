@@ -1,0 +1,14 @@
+POST /register 201 - 171.921 ms
+POST /register 400 - 124.034 ms
+POST /login 200 - 278.658 ms
+GET /profiles 200 - 6.836 ms
+POST /profile/create 201 - 8.874 ms
+GET /profile 200 - 13.004 ms
+PATCH /profile/edit 400 - 4.199 ms
+PATCH /profile/edit 200 - 85.048 ms
+DELETE /profile/delete 200 - 14.777 ms
+GET /profile 200 - 8.484 ms
+GET /profile 304 - 12.414 ms
+POST /profile/create 201 - 6.709 ms
+GET /profile 200 - 5.598 ms
+GET /profiles 200 - 2.679 ms

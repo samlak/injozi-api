@@ -2,9 +2,9 @@
   "swaggerDefinition": {
     "openapi": "3.0.0",
     "info": {
-      "title": "Gebeya API",
+      "title": "INJOZI API",
       "version": "1.0.0",
-      "description": "This is Gebeya API documentation"
+      "description": "This is INJOZI API documentation"
     },
     "servers": [
       {

@@ -2,6 +2,9 @@ require('dotenv').config();
 require('./db/mongoose');
 
 const express = require('express');
+const morgan = require('morgan');
+const fs = require('fs');
+const path = require('path');
 const bodyParser = require('body-parser');
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
@@ -25,6 +28,10 @@ const options = {
 }
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs, options));
+
+// setup the logger
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+app.use(morgan(':method :url :status - :response-time ms', { stream: accessLogStream }))
 
 app.use('/', routes);
 
